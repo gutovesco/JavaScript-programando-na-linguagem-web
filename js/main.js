@@ -21,41 +21,13 @@ imcPaciente.textContent = imc.toFixed(2);
 if(peso <= 0 || peso >= 500){
     alert("Peso invalido")
     paciente.classList.add("paciente-invalido")
+    }   
+
+    function calculaImc(peso,altura){
+        var imc = 0
+
+        imc = peso / (altura * altura)
+        
+        return imc.toFixed(2)
+    }
 }
-
-}
-
-btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    console.log('clicado')
-
-let form = document.querySelector("#form-adiciona");
-let novoNome = form.nome.value;
-let novoPeso = form.peso.value;
-let novaAltura = form.altura.value;
-let novaGordura = form.gordura.value
-
-
-let pacientTr = document.createElement("tr")
-
-let nomeTd = document.createElement("td")
-let pesoTd = document.createElement("td")
-let alturaTd = document.createElement("td")
-let gorduraTd = document.createElement("td")
-let imcTd = document.createElement("td")
-
-nomeTd.textContent = novonome;
-pesoTd.textContent = novoPeso;
-alturaTd.textContent = novaAltura;
-gorduraTd.textContent = novaGordura;
-imcTd.textContent = imc;
-
-pacientTr.appendChild(nomeTd)
-pacientTr.appendChild(pesoTd)
-pacientTr.appendChild(alturaTd)
-pacientTr.appendChild(gorduraTd)
-pacientTr.appendChild(imcTd)
-
-})
-
-
