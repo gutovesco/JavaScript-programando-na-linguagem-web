@@ -34,7 +34,27 @@ let novoNome = form.nome.value;
 let novoPeso = form.peso.value;
 let novaAltura = form.altura.value;
 let novaGordura = form.gordura.value
-console.log(novoNome)
+
+
+let pacientTr = document.createElement("tr")
+
+let nomeTd = document.createElement("td")
+let pesoTd = document.createElement("td")
+let alturaTd = document.createElement("td")
+let gorduraTd = document.createElement("td")
+let imcTd = document.createElement("td")
+
+nomeTd.textContent = novonome;
+pesoTd.textContent = novoPeso;
+alturaTd.textContent = novaAltura;
+gorduraTd.textContent = novaGordura;
+imcTd.textContent = imc;
+
+pacientTr.appendChild(nomeTd)
+pacientTr.appendChild(pesoTd)
+pacientTr.appendChild(alturaTd)
+pacientTr.appendChild(gorduraTd)
+pacientTr.appendChild(imcTd)
 
 })
 
