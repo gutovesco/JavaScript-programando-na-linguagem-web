@@ -13,13 +13,17 @@ botaoAdicionar.addEventListener("click", function(event) {
         console.log('paciente invalido')
         return
     }
-
-    var tabela = document.querySelector("#tabela-pacientes");
-
-    tabela.appendChild(pacienteTr);
+    
+    adicionaPacienteNaTabela(paciente)
 
     form.reset()
 });
+
+function adicionaPacienteNaTabela(paciente){
+    var pacienteTr = montaTr(paciente)
+    var tabela = document.querySelector("#tabela-pacientes")
+    tabela.appendChild(pacienteTr)
+}
 
 function obtemPacienteDoForm(form){
 

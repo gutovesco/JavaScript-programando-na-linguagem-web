@@ -136,3 +136,17 @@ button[disabled=disabled], button:disabled {
 .paciente-invalido {
 	background-color: lightcoral;
 }
+#filtrar-tabela{
+	margin-bottom: 20px;
+	border-radius: 3px;
+	padding: 5px;
+	width: 140px;
+	height: 26px;
+	outline: none;
+}
+#filtrar-tabela:focus{
+	outline: none;
+}
+.invisivel{
+	display: none;
+}
